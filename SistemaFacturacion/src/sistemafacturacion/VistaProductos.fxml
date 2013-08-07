@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml" fx:controller="sistemafacturacion.VistaProductosController">
+  <children>
+    <MenuBar layoutX="14.0" layoutY="14.0">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#gotoClientes" text="Clientes" fx:id="clientesMenu" />
+            <MenuItem mnemonicParsing="false" text="Close" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <SplitPane dividerPositions="0.6792207792207792" focusTraversable="true" layoutX="14.0" layoutY="38.0" prefHeight="448.0" prefWidth="772.0">
+      <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="446.0" prefWidth="530.0">
+          <children>
+            <TableView fx:id="productosTB" layoutX="10.0" layoutY="99.0" prefHeight="340.0" prefWidth="500.0">
+              <columns>
+                <TableColumn prefWidth="100.0" text="Nombre" fx:id="nombreCL" />
+                <TableColumn prefWidth="200.0" text="Presentación" fx:id="presentacionCL" />
+                <TableColumn prefWidth="100.0" text="Cantidad" fx:id="cantidadCL" />
+                <TableColumn prefWidth="99.0" text="Precio" fx:id="precioCL" />
+              </columns>
+            </TableView>
+            <Button fx:id="buscarBT" layoutX="97.0" layoutY="34.0" mnemonicParsing="false" onAction="#buscar" text="Buscar" />
+            <TextField fx:id="buscarTF" layoutX="185.0" layoutY="34.0" prefWidth="245.0" />
+          </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+          <children>
+            <Label layoutX="19.0" layoutY="6.0" text="Nombre:" />
+            <TextField fx:id="nombreTF" layoutX="19.0" layoutY="22.0" prefWidth="200.0" />
+            <Label layoutX="19.0" layoutY="53.0" text="Presentación:" />
+            <Label layoutX="19.0" layoutY="121.0" text="Cantidad:" />
+            <Label layoutX="19.0" layoutY="167.0" text="Precio:" />
+            <TextField fx:id="presentacionTF" layoutX="17.0" layoutY="69.0" prefHeight="40.0" prefWidth="199.9998779296875" />
+            <TextField fx:id="cantidadTF" layoutX="19.0" layoutY="137.0" prefWidth="200.0" />
+            <TextField fx:id="precioTF" layoutX="19.0" layoutY="183.0" prefWidth="200.0" />
+            <Button fx:id="aniadirBT" layoutX="61.0" layoutY="236.0" mnemonicParsing="false" onAction="#aniadir" prefWidth="121.0" text="Añadir" />
+            <Button fx:id="modificarBT" layoutX="61.0" layoutY="275.0" mnemonicParsing="false" onAction="#modificar" prefWidth="121.0" text="Modificar" />
+            <Button fx:id="eliminarBT" layoutX="61.0" layoutY="314.0" mnemonicParsing="false" onAction="#eliminar" prefWidth="121.0" text="Eliminar" />
+            <Button fx:id="nuevoBT" layoutX="61.0" layoutY="362.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="40.0" prefWidth="121.0" text="Nuevo" />
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+  </children>
+</AnchorPane>
